@@ -3,7 +3,7 @@
 
 - A program that processes a text-based seating chart to evaluate sightline accessibility, analyzing attendee placement and individual heights (in inches) to determine whether any participants have obstructed views of the front stage.
 
-# AUTHOR INFO
+## Author Info
 
 - Full Name: Ethan E. Lopez
 - Student ID: 2425516
