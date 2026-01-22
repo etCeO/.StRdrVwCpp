@@ -1,4 +1,4 @@
-# .StRdrVwCpp
+# Seat Reader View
 
 - A program that takes in a txt script seating chart and confirms if people have trouble viewing the front stage according to their arrangement and heights in inches
 
