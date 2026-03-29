@@ -39,7 +39,7 @@ This program checks if people in a seating configuration have a view of the stag
 
 ### Output
 ---
-The seats where people’s views are obstructed
+The seats where people's views are not obstructed
 
 Example Execution
 
@@ -47,3 +47,28 @@ Example Execution
 
 Example Output (conceptual):
 - In column 1 there are 2 that can see. Their heights are: 92.5, 121.2.
+
+## Input Format
+
+The input file is a seating chart represented as a grid of heights.
+
+#### Expected Structure
+
+The first line of the input file is two integers.
+
+R C
+Where R is the number of rows and C is the number of columns.
+
+Next, there are R lines, with C numbers on each line.
+
+Example (Seats.txt)
+4 3
+65 70 68
+66 72 69
+67 71 70
+68 73 72
+
+Rules
+Each number represents the height of a person in a seat.
+The seats are ordered from front to back. So, row 0 is the closest to the stage.
+A seat is blocked if there is a taller or equal height person sitting directly in front of it.
