@@ -46,3 +46,4 @@ Example Execution
 - ./see Seats.txt
 
 Example Output (conceptual):
+- In column 1 there are 2 that can see. Their heights are: 92.5, 121.2.
