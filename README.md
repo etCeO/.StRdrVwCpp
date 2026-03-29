@@ -24,3 +24,25 @@
 - To compile: g++ *.cpp -o see.exe
 - To run: ./see Seats.txt
 - Note: "Seats.txt" may be replaced with any .txt file that contains doubles for row and column inputs
+
+## Usage
+
+This program checks if people in a seating configuration have a view of the stage based on the heights of the people in front of them.
+
+### What The Program Does
+---
+
+1. Reads in a seating configuration from an input file
+2. Treats this configuration as a grid representing heights
+3. For every column (i.e., every direction to look at the stage):
+  - Checks if someone’s view is obstructed because someone in front of them is taller
+
+### Output
+---
+The seats where people’s views are obstructed
+
+Example Execution
+
+- ./see Seats.txt
+
+Example Output (conceptual):
