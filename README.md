@@ -89,7 +89,8 @@ For every column:
 2. Process every row from front to back
 
 For every seat:
-1. While stack is not empty and current height is greater than top:
+
+While stack is not empty and current height is greater than top:
   - Pop stack (people in front do not block those behind)
   - If stack is not empty after popping:
     - The current seat is blocked
