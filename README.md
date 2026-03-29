@@ -99,7 +99,7 @@ While stack is not empty and current height is greater than top:
 ### Data Structures Used
 ---
 
-- 2D Array / Vector: Used to represent seating chart
+- 2D Array: Used to represent seating chart
 - Monotonic Stack (MonoStack):
 
 Provides methods to:
