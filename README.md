@@ -54,21 +54,55 @@ The input file is a seating chart represented as a grid of heights.
 
 #### Expected Structure
 
-The first line of the input file is two integers.
+BEGIN
+81.4 121.4 50.2 75.3 75.1
+90.0 90.5 80.2 60.3 50.2
+80.8 80.3 90.7 89.9 94.7
+82.2 72.1 92.6 54.4 95.1
+END
 
-R C
-Where R is the number of rows and C is the number of columns.
+#### Rules
 
-Next, there are R lines, with C numbers on each line.
+1. Each number represents the height of a person in a seat.
+2. The seats are ordered from front to back. So, row 0 is the closest to the stage.
+3. A seat is blocked if there is a taller or equal height person sitting directly in front.
 
-Example (Seats.txt)
-4 3
-65 70 68
-66 72 69
-67 71 70
-68 73 72
+## Implementation Details
 
-Rules
-Each number represents the height of a person in a seat.
-The seats are ordered from front to back. So, row 0 is the closest to the stage.
-A seat is blocked if there is a taller or equal height person sitting directly in front of it.
+### Core Concept: Monotonic Stack
+---
+
+The code employs a monotonic stack data structure to facilitate fast computation of visibility in every column.
+- A monotonic stack is a data structure where elements are stored in a particular order (in this case, heights in descending order).
+
+As we progress through every column:
+
+1. It compares heights with those in front
+2. Removes those in front that do not block those behind
+3. Detects when a person in front blocks the current seat
+
+### Algorithm Overview
+---
+
+For every column:
+1. Create an empty monotonic stack data structure
+2. Process every row from front to back
+
+For every seat:
+1. While stack is not empty and current height is greater than top:
+  - Pop stack (people in front do not block those behind)
+  - If stack is not empty after popping:
+    - The current seat is blocked
+  - Push current height onto stack
+
+### Data Structures Used
+---
+
+- 2D Array / Vector: Used to represent seating chart
+- Monotonic Stack (MonoStack):
+
+Provides methods to:
+1. Push onto stack
+2. Pop off stack
+3. Peek top element on stack
+4. Check if stack is empty
